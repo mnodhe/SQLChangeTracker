@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SQLChangeTracker.Controllers
 {
@@ -54,12 +55,20 @@ namespace SQLChangeTracker.Controllers
             string json = System.IO.File.ReadAllText("list.txt");
             List<object> lastdbmodel = JsonConvert.DeserializeObject<List<object>>(json);
             //get latest data
-            var TableNamesAndDataList = _utils.GetAllTablesDataAndStoreToList();
+            var TableNamesAndDataList = JsonConvert.SerializeObject( _utils.GetAllTablesDataAndStoreToList());
+
             // find diffrences.
-            var x = lastdbmodel.GetType();
+            var difference = TableNamesAndDataList.Where(x =>
+            !lastdbmodel.Any(y => 
+            JsonConvert.SerializeObject(y) == JsonConvert.SerializeObject(x)
+            )).ToList();
 
-            List<dynamic> difference = TableNamesAndDataList.Where(x => !lastdbmodel.Any(y => JObject.FromObject(y).Equals(JObject.FromObject(x)))).ToList();
+            List<Dictionary<string, object>> diff= new List<Dictionary<string, object>>();
 
+
+
+            //diff.Add("TableName", TableName);
+            //diff.Add("Data", data);
 
             //update text file with new data model
             GetAllTablesDataAndStoreToFile();

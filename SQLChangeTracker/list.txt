@@ -28,7 +28,7 @@
       },
       {
         "Id": 5,
-        "Name": "app2",
+        "Name": "app22",
         "URL": "http://app2.com",
         "PrivateInternalToken": "56a1sd654as65das6"
       }
