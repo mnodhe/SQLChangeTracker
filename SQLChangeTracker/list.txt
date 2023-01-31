@@ -1,0 +1,41 @@
+[
+  {
+    "TableName": "__EFMigrationsHistory",
+    "Data": [
+      {
+        "MigrationId": "20220501032454_init",
+        "ProductVersion": "6.0.4"
+      },
+      {
+        "MigrationId": "20220501033037_adduserdevicestbl",
+        "ProductVersion": "6.0.4"
+      },
+      {
+        "MigrationId": "20220501033155_changetblname",
+        "ProductVersion": "6.0.4"
+      }
+    ]
+  },
+  {},
+  {
+    "TableName": "Applications",
+    "Data": [
+      {
+        "Id": 2,
+        "Name": "app1",
+        "URL": "http://app1.com",
+        "PrivateInternalToken": "47as5d4as5d46as"
+      },
+      {
+        "Id": 5,
+        "Name": "app2",
+        "URL": "http://app2.com",
+        "PrivateInternalToken": "56a1sd654as65das6"
+      }
+    ]
+  },
+  {},
+  {},
+  {},
+  {}
+]

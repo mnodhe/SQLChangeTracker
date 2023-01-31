@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLChangeTracker", "SQLChangeTracker\SQLChangeTracker.csproj", "{7A865AE1-0289-42AF-A661-6E12E91B774E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{D6EF3C93-24A1-48B0-95AC-75E03F1B8835}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A865AE1-0289-42AF-A661-6E12E91B774E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A865AE1-0289-42AF-A661-6E12E91B774E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A865AE1-0289-42AF-A661-6E12E91B774E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A865AE1-0289-42AF-A661-6E12E91B774E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6EF3C93-24A1-48B0-95AC-75E03F1B8835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6EF3C93-24A1-48B0-95AC-75E03F1B8835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6EF3C93-24A1-48B0-95AC-75E03F1B8835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6EF3C93-24A1-48B0-95AC-75E03F1B8835}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {464A014A-68E9-42AA-9A68-C41910866947}
+	EndGlobalSection
+EndGlobal
