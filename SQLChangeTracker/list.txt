@@ -1,6 +1,6 @@
 [
   {
-    "TableName": "__EFMigrationsHistory",
+    "TableName": "dbo.__EFMigrationsHistory",
     "Data": [
       {
         "MigrationId": "20220501032454_init",
@@ -18,7 +18,7 @@
   },
   {},
   {
-    "TableName": "Applications",
+    "TableName": "dbo.Applications",
     "Data": [
       {
         "Id": 2,
@@ -28,20 +28,20 @@
       },
       {
         "Id": 5,
-        "Name": "app2",
+        "Name": "app22",
         "URL": "http://app2.com",
         "PrivateInternalToken": "56a1sd654as65das6"
       }
     ]
   },
   {
-    "TableName": "Users",
+    "TableName": "dbo.Users",
     "Data": [
       {
         "Id": 1,
-        "UserName": "mnodhe",
-        "UserFullName": "mohammad",
-        "Email": "mnodhe@gmail.com",
+        "UserName": "mnodhe2",
+        "UserFullName": "mohammad2",
+        "Email": "mnodhe@gmail2.com",
         "Gender": true,
         "Mobile": "09120747823",
         "OtherPhone": "22555555",

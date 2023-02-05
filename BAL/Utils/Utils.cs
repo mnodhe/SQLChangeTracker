@@ -42,8 +42,12 @@ namespace BAL.Utils
             List<string> tableNameList = GetTableNamesFromConnectionString();
             foreach (var tableName in tableNameList)
             {
+                if (!tableName.Contains("Security"))
+                {
                 var x = GetAllDataFromTableName(tableName);
                 list.Add(x);
+
+                }
             }
             return list;
         }
