@@ -1,7 +1,9 @@
 ﻿using BAL.Utils;
+using JsonDiffer;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.ComponentModel;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SQLChangeTracker.Controllers
@@ -66,14 +68,23 @@ namespace SQLChangeTracker.Controllers
             List<Dictionary<string, object>> diff= new List<Dictionary<string, object>>();
 
 
+            var j1 = JToken.Parse(json);
+            var j2 = JToken.Parse(TableNamesAndDataList);
 
+            var diffs = JsonDifferentiator.Differentiate(j1, j2);
+            var x = 1;
             //diff.Add("TableName", TableName);
             //diff.Add("Data", data);
 
             //update text file with new data model
             GetAllTablesDataAndStoreToFile();
-            return Ok(difference);
+            if(diffs is null)
+            {
+                return NotFound("No Diffrence Found");
+            }
+            return Ok(diffs.ToString());
         }
     }
+
 }
 

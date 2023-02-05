@@ -28,13 +28,30 @@
       },
       {
         "Id": 5,
-        "Name": "app22",
+        "Name": "app2",
         "URL": "http://app2.com",
         "PrivateInternalToken": "56a1sd654as65das6"
       }
     ]
   },
-  {},
+  {
+    "TableName": "Users",
+    "Data": [
+      {
+        "Id": 1,
+        "UserName": "mnodhe",
+        "UserFullName": "mohammad",
+        "Email": "mnodhe@gmail.com",
+        "Gender": true,
+        "Mobile": "09120747823",
+        "OtherPhone": "22555555",
+        "SMSVerificationCode": "123",
+        "IsActive": true,
+        "ShebaIR": null,
+        "ProfilePicture": "/asdsa"
+      }
+    ]
+  },
   {},
   {},
   {}

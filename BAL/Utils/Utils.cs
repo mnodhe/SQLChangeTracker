@@ -15,7 +15,7 @@ namespace BAL.Utils
         {
             SqlConnection con = new SqlConnection(_configuration["ConnectionString"].ToString());
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'", con);
+            SqlCommand cmd = new SqlCommand("SELECT TABLE_SCHEMA+'.'+TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'", con);
             SqlDataReader dr = cmd.ExecuteReader();
             List<string> data = new List<string>();
             if (dr.HasRows == true)
